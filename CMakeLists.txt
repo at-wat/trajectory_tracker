@@ -4,6 +4,9 @@ project(trajectory_tracker)
 ## Find catkin and any catkin packages
 find_package(catkin REQUIRED COMPONENTS roscpp rospy message_generation nav_msgs geometry_msgs tf interactive_markers)
 
+message(ERROR "'trajectory_tracker' package has been absorbed into the neonavigation meta-package.")
+message(ERROR "Please clone https://github.com/at-wat/neonavigation/ instead.")
+
 add_service_files(FILES ChangePath.srv)
 add_message_files(FILES TrajectoryTrackerStatus.msg TrajectoryServerStatus.msg)
 generate_messages(DEPENDENCIES std_msgs)
